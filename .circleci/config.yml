@@ -29,6 +29,11 @@ jobs:
           name: Unit tests
           command: mvn test
 
+       # pom.xml
+      - run:
+          name: Navigate to project directory
+          command: cd TP-techniques_de_test
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
