@@ -26,14 +26,30 @@ http://maven.apache.org/maven-v4_0_0.xsd"
             </execution>
         </executions>
         </plugin>
+        
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <includes>
+                        <include>**/IPokemonMetadataProviderTest.java</include>
+                        <include>**/IPokemonFactoryTest.java</include>
+                        <include>**/IPokedexFactoryTest.java</include>
+                        <include>**/IPokedexTest.java</include>
+                        <include>**/IPokemonTrainerFactoryTest.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            
     </plugins>
 </build>
 
 <dependencies>
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>3.8.1</version>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.0</version>
         <scope>test</scope>
 </dependency>
 	<dependency>
