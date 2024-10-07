@@ -20,15 +20,17 @@ jobs:
       # Checkout the code as the first step.
       - checkout
 
-      # Use mvn clean and package as the standard maven build phase
+   # pom.xml
       - run:
-          name: Build
-          command: mvn -B -DskipTests clean package
+          name: Navigate to project directory
+          command: cd TP-techniques_de_test && mvn -B -DskipTests clean package
+
       # Then run your tests!
       - run:
           name: Unit tests
-          command: mvn test
+          command: cd TP-techniques_de_test && mvn test
 
+      
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
