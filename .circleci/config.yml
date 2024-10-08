@@ -23,12 +23,12 @@ jobs:
    # pom.xml
       - run:
           name: Navigate to project directory
-          command: mvn -B -DskipTests clean package
+          command: cd TP-techniques_de_test && mvn -B -DskipTests clean package
 
       # Then run your tests!
       - run:
           name: Unit tests
-          command: mvn test
+          command: cd TP-techniques_de_test && mvn test
 
       
 # Orchestrate jobs using workflows
