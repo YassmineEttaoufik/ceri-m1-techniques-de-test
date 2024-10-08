@@ -10,4 +10,6 @@ public class IPokemonFactoryTest {
 	void setup() {
 		iPokemonFactory=Mockito.mock(IPokemonFactory.class);
 	}
+	
+	
 }
