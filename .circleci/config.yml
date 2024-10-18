@@ -33,7 +33,7 @@ jobs:
           name: Unit tests with Jacoco
           command: cd TP-techniques_de_test && mvn test jacoco:report
 
-       - run:
+      - run:
           name: Upload coverage to Codecov
           command: bash <(curl -s https://codecov.io/bash)
 
