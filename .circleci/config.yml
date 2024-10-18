@@ -47,6 +47,3 @@ workflows:
       branch: master
     jobs:
       - build-and-test
-      - codecov/upload:
-          requires:
-            - build-and-test
