@@ -2,6 +2,9 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@4.0.1
+  
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -27,8 +30,12 @@ jobs:
 
       # Then run your tests!
       - run:
-          name: Unit tests
-          command: cd TP-techniques_de_test && mvn test
+          name: Unit tests with Jacoco
+          command: cd TP-techniques_de_test && mvn test jacoco:report
+
+       - run:
+          name: Upload coverage to Codecov
+          command: bash <(curl -s https://codecov.io/bash)
 
       
 # Orchestrate jobs using workflows
@@ -40,3 +47,6 @@ workflows:
       branch: master
     jobs:
       - build-and-test
+      - codecov/upload:
+          requires:
+            - build-and-test
