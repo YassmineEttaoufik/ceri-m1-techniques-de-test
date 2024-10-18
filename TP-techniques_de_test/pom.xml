@@ -43,7 +43,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
             </plugin>
             
             
-      <!-- Plugin JaCoCo pour la couverture de code -->
+      <!-- Plugin JaCoCo pour la couverture de code  -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
