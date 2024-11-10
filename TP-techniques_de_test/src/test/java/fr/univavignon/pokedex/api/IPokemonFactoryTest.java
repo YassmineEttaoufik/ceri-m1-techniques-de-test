@@ -2,6 +2,7 @@ package fr.univavignon.pokedex.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -47,14 +48,10 @@ public class IPokemonFactoryTest {
 		//Mockito.when(iPokemonFactory.createPokemon(-1, -613, -64, -4000, -4)).thenReturn(bulbiData);
 		Pokemon aqualiData= new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
 		Mockito.when(metadataProvider.getPokemonMetadata(133)).thenReturn(aqualiData);
-		Pokemon bulbi=iPokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+		Pokemon bulbi=iPokemonFactory.createPokemon(-133, 2729, 202, 5000, 4);
 		
 		// Vérifier que les paramètres sont positifs
-        assertFalse(bulbi.getIndex() <= 0);
-        assertFalse(bulbi.getCp() <= 0);
-        assertFalse(bulbi.getHp() <= 0);
-        assertFalse(bulbi.getDust() <= 0);
-        assertFalse(bulbi.getCandy() <= 0);
+		assertNull(bulbi);
 			
 		}
 }

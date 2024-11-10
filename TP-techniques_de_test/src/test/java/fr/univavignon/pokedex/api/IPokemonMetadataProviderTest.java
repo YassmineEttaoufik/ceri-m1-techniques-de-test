@@ -42,9 +42,16 @@ public class IPokemonMetadataProviderTest {
 		// Simuler une PokedexException pour un index invalide
 		//Mockito.when(iPokemonMetadataProvider.getPokemonMetadata(155)).thenThrow(new PokedexException("index invalide"));
 		
+		//indice supérieur à 151
 		assertThrows(PokedexException.class,()->{
 			iPokemonMetadataProvider.getPokemonMetadata(155);
 		});
+		
+		//indice négatif
+		assertThrows(PokedexException.class,()->{
+			iPokemonMetadataProvider.getPokemonMetadata(-155);
+		});
+		
 	}
 	
 	
