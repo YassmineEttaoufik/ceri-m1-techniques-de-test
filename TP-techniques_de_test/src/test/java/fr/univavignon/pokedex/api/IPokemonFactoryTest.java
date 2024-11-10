@@ -2,6 +2,7 @@ package fr.univavignon.pokedex.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -29,6 +30,7 @@ public class IPokemonFactoryTest {
 		//création d' Aquali
 		Pokemon aquali=iPokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
 	
+		assertNotNull(aquali);
 		assertEquals(133,aquali.getIndex());
 		assertEquals("Aquali",aquali.getName());
 		assertEquals(186,aquali.getAttack());

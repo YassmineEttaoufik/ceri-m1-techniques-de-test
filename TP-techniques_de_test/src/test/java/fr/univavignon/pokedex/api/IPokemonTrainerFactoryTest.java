@@ -1,7 +1,7 @@
 package fr.univavignon.pokedex.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,6 +48,28 @@ public class IPokemonTrainerFactoryTest {
 		PokemonTrainer trainerResult=iPokemonTrainerFactory.createTrainer("",Team.MYSTIC,ipokedexFactory);
 		
 		assertEquals(null,trainerResult); 
+		
+	}
+	
+	@Test
+	void testCreateTrainerWithNullTeam() {			
+		//création d'un entraineur sans équipe
+		IPokedexFactory ipokedexFactory=Mockito.mock(IPokedexFactory.class);
+		IPokedex  iPokedex=Mockito.mock(IPokedex.class);
+		Mockito.when(ipokedexFactory.createPokedex(Mockito.any(), Mockito.any())).thenReturn(iPokedex);
+		
+		PokemonTrainer trainerResult=iPokemonTrainerFactory.createTrainer("Ash",null,ipokedexFactory);
+		
+		assertNull(trainerResult); 
+		
+	}
+	
+	@Test
+	void testCreateTrainerWithNullPokedex() {			
+		//création d'un entraineur sans pokedex
+		PokemonTrainer trainerResult=iPokemonTrainerFactory.createTrainer("Ash",Team.MYSTIC,null);
+		
+		assertNull(trainerResult); 
 		
 	}
 
