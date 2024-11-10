@@ -13,8 +13,8 @@ public class IPokemonTrainerFactoryTest {
 	
 	@BeforeEach
 	void setup() {
-		iPokemonTrainerFactory=Mockito.mock(IPokemonTrainerFactory.class);
-		
+		//iPokemonTrainerFactory=Mockito.mock(IPokemonTrainerFactory.class);
+		iPokemonTrainerFactory=new PokemonTrainerFactory();
 	}
 	
 	@Test
@@ -23,9 +23,10 @@ public class IPokemonTrainerFactoryTest {
 		IPokedex  iPokedex=Mockito.mock(IPokedex.class);
 		
 		//création d'un PokemonTrainer
-		PokemonTrainer trainer=new PokemonTrainer("Ash",Team.INSTINCT,iPokedex);
-		Mockito.when(iPokemonTrainerFactory.createTrainer("Ash", Team.INSTINCT, ipokedexFactory)).thenReturn(trainer);
-		
+		//PokemonTrainer trainer=new PokemonTrainer("Ash",Team.INSTINCT,iPokedex);
+		//Mockito.when(iPokemonTrainerFactory.createTrainer("Ash", Team.INSTINCT, ipokedexFactory)).thenReturn(trainer);
+		// Configurer le mock pour qu'il retourne un mock d'IPokedex
+	    Mockito.when(ipokedexFactory.createPokedex(Mockito.any(), Mockito.any())).thenReturn(iPokedex);
 		
 		PokemonTrainer trainerResult=iPokemonTrainerFactory.createTrainer("Ash",Team.INSTINCT,ipokedexFactory);
 	
@@ -39,9 +40,10 @@ public class IPokemonTrainerFactoryTest {
 	void testCreateTrainerWithEmptyName() {			
 		//création d'un entraineur sans nom
 		IPokedexFactory ipokedexFactory=Mockito.mock(IPokedexFactory.class);
-		
+		IPokedex  iPokedex=Mockito.mock(IPokedex.class);
 		//création d'un PokemonTrainer
-		Mockito.when(iPokemonTrainerFactory.createTrainer("", Team.MYSTIC, ipokedexFactory)).thenReturn(null);
+		//Mockito.when(iPokemonTrainerFactory.createTrainer("", Team.MYSTIC, ipokedexFactory)).thenReturn(null);
+		Mockito.when(ipokedexFactory.createPokedex(Mockito.any(), Mockito.any())).thenReturn(iPokedex);
 		
 		PokemonTrainer trainerResult=iPokemonTrainerFactory.createTrainer("",Team.MYSTIC,ipokedexFactory);
 		

@@ -13,17 +13,17 @@ public class IPokedexFactoryTest {
 	
 	@BeforeEach
 	void setup() {
-		iPokedexFactory=Mockito.mock(IPokedexFactory.class);
-		
+		//iPokedexFactory=Mockito.mock(IPokedexFactory.class);
+		iPokedexFactory=new PokedexFactory();
 	}
 	
 	@Test
 	public void testCreatePokedex() {
 		IPokemonMetadataProvider pokemonMetadataProvider=Mockito.mock(IPokemonMetadataProvider.class);
 		IPokemonFactory pokemonFactory=Mockito.mock(IPokemonFactory.class);
-		IPokedex pokedexData=Mockito.mock(IPokedex.class);
+		//IPokedex pokedexData=Mockito.mock(IPokedex.class);
 		
-		Mockito.when(iPokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory)).thenReturn(pokedexData);
+		//Mockito.when(iPokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory)).thenReturn(pokedexData);
 	
 		IPokedex pokedex=iPokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
 		
