@@ -50,10 +50,25 @@ public class IPokemonFactoryTest {
 		//Mockito.when(iPokemonFactory.createPokemon(-1, -613, -64, -4000, -4)).thenReturn(bulbiData);
 		Pokemon aqualiData= new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
 		Mockito.when(metadataProvider.getPokemonMetadata(133)).thenReturn(aqualiData);
-		Pokemon bulbi=iPokemonFactory.createPokemon(-133, -2729, -202, -5000, -4);
-		
-		// Vérifier que les paramètres sont positifs
+				
+		//index invalide
+		Pokemon bulbi=iPokemonFactory.createPokemon(-133, 2729, 202, 5000, 4);
 		assertNull(bulbi);
-			
+		
+		//cp invalide
+		Pokemon bulbi1=iPokemonFactory.createPokemon(133, -2729, 202, 5000, 4);
+		assertNull(bulbi1);	
+		
+		//hp invalide
+		Pokemon bulbi2=iPokemonFactory.createPokemon(133, 2729, -202, 5000, 4);
+		assertNull(bulbi2);	
+		
+		//dust invalide
+		Pokemon bulbi3=iPokemonFactory.createPokemon(133, 2729, 202, -5000, 4);
+		assertNull(bulbi3);	
+		
+		//candy invalide
+		Pokemon bulbi4=iPokemonFactory.createPokemon(133, 2729, 202, 5000, -4);
+		assertNull(bulbi4);	
 		}
 }

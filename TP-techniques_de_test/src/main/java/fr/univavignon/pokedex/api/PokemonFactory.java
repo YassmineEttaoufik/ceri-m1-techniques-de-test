@@ -9,7 +9,7 @@ public class PokemonFactory implements IPokemonFactory{
 	
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-		if(index >=0 && cp >=0 && hp >=0 && dust >=0 && candy >=0){
+		if(index >=0 && cp >0 && hp >0 && dust >0 && candy >0){
 			try {
 				PokemonMetadata metadata= metadataProvider.getPokemonMetadata(index);
 				double iv=(12+10+11)/45.0*100;
