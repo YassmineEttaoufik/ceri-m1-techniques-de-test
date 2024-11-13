@@ -117,17 +117,16 @@ public class IPokedexTest {
 	@Test
 	public void testGetPokemonMetadata()throws PokedexException {
 		
-		PokemonMetadata bulbizarre = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
-		//récuperation des données de Bulbizarre
+		IPokemonMetadataProvider iPokemonMetadataProvider=new PokemonMetadataProvider();
 
-		 Mockito.when(pokemonProvider.getPokemonMetadata(0)).thenReturn(bulbizarre);
-		 
-		
+		//récuperation des données de Bulbizarre
+		PokemonMetadata bulbizarre=iPokemonMetadataProvider.getPokemonMetadata(0);
+				
 		assertEquals(0,bulbizarre.getIndex());
 		assertEquals("Bulbizarre",bulbizarre.getName());
 		assertEquals(126,bulbizarre.getAttack());
 		assertEquals(126,bulbizarre.getDefense());
-		assertEquals(90,bulbizarre.getStamina());			
+		assertEquals(90,bulbizarre.getStamina());		
 	}
 	
 	@Test
@@ -135,11 +134,9 @@ public class IPokedexTest {
 		Pokemon aqualiData= new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
 		
 		Mockito.when(pokemonProvider.getPokemonMetadata(133)).thenReturn(aqualiData);
-		//création d' Aquali
-		Pokemon aquali =new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
-		Mockito.when(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4)).thenReturn(aquali);
 	
-		Pokemon result=pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+		IPokemonFactory iPokemonFactory=new PokemonFactory(pokemonProvider);
+		Pokemon result=iPokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
 		
 		assertNotNull(result);
 		assertEquals(133,result.getIndex());
@@ -151,6 +148,6 @@ public class IPokedexTest {
 		assertEquals(202,result.getHp());
 		assertEquals(5000,result.getDust());
 		assertEquals(4,result.getCandy());
-		assertEquals(100,result.getIv());		
+		assertEquals(73,result.getIv());		
 	}
 }
