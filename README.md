@@ -8,3 +8,7 @@ Badge pour la couverture de test: [![codecov](https://codecov.io/github/Yassmine
 
 Implémentation:
 
+Pour les tests, j’ai utilisé la bibliothèque mockito et Junit pour les tests unitaires et les mocks, ce qui nous permet de tester indépendamment chaque composant et de simuler des dépendances comme le MetadataProvider et PokemonFactory dans IPokedex. 
+L’outil JaCoCo est intégré pour générer un rapport de couverture, nous aidant à maintenir un code bien testé et fiable.
+Pour l’implementation des interfaces je vérifie d’abord si les paramètres des fonctions sont valides ou si une exception est lancée puis j’implémente le reste des fonctions. 
+
