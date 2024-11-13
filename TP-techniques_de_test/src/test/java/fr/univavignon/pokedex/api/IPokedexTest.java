@@ -1,6 +1,7 @@
 package fr.univavignon.pokedex.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.ArrayList;
@@ -110,5 +111,46 @@ public class IPokedexTest {
 		List<Pokemon> pokemonsResult=iPokedex.getPokemons(PokemonComparators.INDEX);
 		assertEquals("Bulbizarre",pokemonsResult.get(0).getName());
 		assertEquals("Aquali",pokemonsResult.get(1).getName());
+	}
+	
+	
+	@Test
+	public void testGetPokemonMetadata()throws PokedexException {
+		
+		PokemonMetadata bulbizarre = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+		//récuperation des données de Bulbizarre
+
+		 Mockito.when(pokemonProvider.getPokemonMetadata(0)).thenReturn(bulbizarre);
+		 
+		
+		assertEquals(0,bulbizarre.getIndex());
+		assertEquals("Bulbizarre",bulbizarre.getName());
+		assertEquals(126,bulbizarre.getAttack());
+		assertEquals(126,bulbizarre.getDefense());
+		assertEquals(90,bulbizarre.getStamina());			
+	}
+	
+	@Test
+	public void testCreatePokemon() throws PokedexException {
+		Pokemon aqualiData= new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
+		
+		Mockito.when(pokemonProvider.getPokemonMetadata(133)).thenReturn(aqualiData);
+		//création d' Aquali
+		Pokemon aquali=new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
+		Mockito.when(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4)).thenReturn(aquali);
+	
+		Pokemon result=pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+		
+		assertNotNull(result);
+		assertEquals(133,result.getIndex());
+		assertEquals("Aquali",result.getName());
+		assertEquals(186,result.getAttack());
+		assertEquals(168,result.getDefense());
+		assertEquals(260,result.getStamina());
+		assertEquals(2729,result.getCp());
+		assertEquals(202,result.getHp());
+		assertEquals(5000,result.getDust());
+		assertEquals(4,result.getCandy());
+		assertEquals(100,result.getIv());		
 	}
 }
