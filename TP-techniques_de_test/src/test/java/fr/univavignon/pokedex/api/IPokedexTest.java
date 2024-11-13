@@ -136,7 +136,7 @@ public class IPokedexTest {
 		
 		Mockito.when(pokemonProvider.getPokemonMetadata(133)).thenReturn(aqualiData);
 		//création d' Aquali
-		Pokemon aquali=new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
+		Pokemon aquali =new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
 		Mockito.when(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4)).thenReturn(aquali);
 	
 		Pokemon result=pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
