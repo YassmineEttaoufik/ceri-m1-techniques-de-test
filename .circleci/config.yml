@@ -34,9 +34,9 @@ jobs:
           command: cd TP-techniques_de_test && mvn test jacoco:report
       
       #checkstyle 
-     # - run:
-        #  name: Checkstyle Analysis
-         # command: cd TP-techniques_de_test && mvn checkstyle:checkstyle
+      - run:
+          name: Checkstyle Analysis
+          command: cd TP-techniques_de_test && mvn checkstyle:checkstyle
       
       #Codecov
       - run:
