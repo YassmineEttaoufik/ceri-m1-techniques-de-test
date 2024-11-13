@@ -6,6 +6,8 @@ Badge pour CircleCI: [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Ya
 
 Badge pour la couverture de test: [![codecov](https://codecov.io/github/YassmineEttaoufik/ceri-m1-techniques-de-test/graph/badge.svg?token=CGIUKS6JE9)](https://codecov.io/github/YassmineEttaoufik/ceri-m1-techniques-de-test)
 
+Badge pour checkstyle: ![Checkstyle](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/<username>/<repository>/main/target/checkstyle-result.xml)
+
 Implémentation:
 
 Pour les tests, j’ai utilisé la bibliothèque mockito et Junit pour les tests unitaires et les mocks, ce qui nous permet de tester indépendamment chaque composant et de simuler des dépendances comme le MetadataProvider et PokemonFactory dans IPokedex. 
