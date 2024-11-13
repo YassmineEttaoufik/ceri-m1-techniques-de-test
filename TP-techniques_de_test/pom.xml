@@ -64,7 +64,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                 </executions>
             </plugin>
             
-            <!-- Plugin checkstyle pour la qualité du code  -->
+            <!--  Plugin checkstyle pour la qualité du code  -->
            <plugin>
             	<groupId>org.apache.maven.plugins</groupId>
             	<artifactId>maven-checkstyle-plugin</artifactId>
