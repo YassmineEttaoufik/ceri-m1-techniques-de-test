@@ -42,6 +42,30 @@ jobs:
       - run:
           name: Upload coverage to Codecov
           command: bash <(curl -s https://codecov.io/bash)
+  docs-deploy:
+    docker:
+      - image: cimg/openjdk:20.0
+    steps:
+      - checkout
+      #Javadoc
+      - run:
+          name: Generate Javadoc
+          command: |
+            cd TP-techniques_de_test && mvn javadoc:javadoc
+            mkdir -p docs/_build/html
+            cp -r target/site/apidocs/* docs/_build/html/
+      #Deployment
+      - run:
+          name: Install and configure gh-pages
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config --global user.email "ci-build@YassmineEttaoufik.com"
+            git config --global user.name "ci-build"
+      #GitHub Pages
+      - run:
+          name: Deploy Javadoc to gh-pages branch
+          command: |
+            gh-pages --dotfiles --message "[skip ci] Updated Javadoc" --dist docs/_build/html
 
       
 # Orchestrate jobs using workflows
@@ -52,4 +76,15 @@ workflows:
     when:
       branch: master
     jobs:
-      - build-and-test
+      - build-and-test:
+          filters:
+            branches:
+              only:
+                - master
+      - docs-deploy:
+          requires:
+            - build-and-test
+          filters:
+            branches:
+              only:
+                - master
