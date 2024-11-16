@@ -55,20 +55,20 @@ jobs:
             mkdir -p docs/
             cp -r target/site/apidocs/* docs/
       #Deployment
-    #  - run:
-       #   name: Install and configure gh-pages
-       #   command: |
-        #    git config --global user.email "ci-build@YassmineEttaoufik.com"
-         #   git config --global user.name "ci-build"
+      - run:
+          name: Install and configure gh-pages
+          command: |
+            git config --global user.email "ci-build@YassmineEttaoufik.com"
+            git config --global user.name "ci-build"
             
-           # git checkout --orphan gh-pages || git checkout gh-pages
-           # git rm -rf .
+            git checkout --orphan gh-pages || git checkout gh-pages
+            git rm -rf .
             
-          #  cp -r docs/* ./
+            cp -r docs/* ./
             
-          #  git add -A
-          #  git commit -m "[skip ci] Updated Javadoc"
-          #  git push origin gh-pages --force 
+            git add -A
+            git commit -m "[skip ci] Updated Javadoc"
+            git push origin gh-pages --force 
 
       
 # Orchestrate jobs using workflows
