@@ -87,16 +87,16 @@ http://maven.apache.org/maven-v4_0_0.xsd"
        	    <!--  Badge checkstyle  -->
            <plugin>
             	<groupId>com.github.bordertech.buildtools</groupId>
-            	<artifactId>maven-badge-plugin</artifactId>
-            	<version>1.1.0</version>
+            	<artifactId>badger</artifactId>
+            	<version>1.0.0</version>
             	<executions>
                 <execution>
                     <phase>verify</phase>
                     <goals>
-                        <goal>badge</goal>
+                        <goal>badges</goal>
                     </goals>         
             	<configuration>
-                	<outputDir>target/site/badges</outputDir>
+                	<outputDir>${project.basedir}</outputDir>
                 	 <inputFiles>
                		  <inputFile>target/checkstyle-result.xml</inputFile>
            			 </inputFiles>
