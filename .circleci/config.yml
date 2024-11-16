@@ -52,7 +52,7 @@ jobs:
           name: Generate Javadoc
           command: |
             cd TP-techniques_de_test && mvn javadoc:javadoc
-            mkdir -p docs/_build/html
+            mkdir -p docs/
             cp -r target/site/apidocs/* docs/
       #Deployment
       - run:
