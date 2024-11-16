@@ -26,6 +26,11 @@ public class Pokedex implements IPokedex{
 		return pookemonFactory.createPokemon(index, cp, hp, dust, candy);
 	}
 
+	/**
+	 * Renvoie la taille du Pokedex.
+	 * 
+	 * @return la taille du Pokedex
+	 */
 	@Override
 	public int size() {
 		return pokemons.size();
