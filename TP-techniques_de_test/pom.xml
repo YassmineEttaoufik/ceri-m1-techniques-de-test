@@ -104,7 +104,22 @@ http://maven.apache.org/maven-v4_0_0.xsd"
            		</execution>
             </executions>
        	   </plugin>
-            
+       	   
+       	    <!--  Plugin javadoc  -->
+           <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-javadoc-plugin</artifactId>
+            	<version>3.4.1</version>
+            	<executions>
+                <execution>
+					<id>attach-javadocs</id>
+					<phase>package</phase>
+                    <goals>
+                        <goal>javadoc</goal>
+                    </goals>
+                </execution>
+            </executions>
+       	   </plugin> 
     </plugins>
 </build>
 
