@@ -47,6 +47,14 @@ jobs:
       - image: cimg/openjdk:20.0
     steps:
       - checkout
+      # Définir GIT_SSH_COMMAND pour forcer l'utilisation de la clé SSH spécifique
+      - run:
+          name: Set GIT_SSH_COMMAND to use the right SSH key
+          command: |
+            mkdir -p ~/.ssh
+            echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
       #Javadoc
       - run:
           name: Generate Javadoc
