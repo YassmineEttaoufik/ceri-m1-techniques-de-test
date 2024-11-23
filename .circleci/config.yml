@@ -64,7 +64,7 @@ jobs:
       # Deployment
       - add_ssh_keys:
           fingerprints:
-            - "xAcl+yopaYQS7UBC2LdaTy4Gcq/lh2aIVYuCQ2cD6Ws"   
+            - "38:69:46:7a:15:f0:1b:e5:4f:b2:8a:5b:32:37:be:a8"   
       - run:
           name: Install and configure gh-pages
           command: |
