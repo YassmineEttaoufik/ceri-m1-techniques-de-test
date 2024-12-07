@@ -78,13 +78,13 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                 </execution>
             </executions>
             	<configuration>
-                	<configLocation>target/google_checks.xml</configLocation>
+                	<configLocation>google_checks.xml</configLocation>
                		 <failOnViolation>true</failOnViolation>
                		  <outputFile>target/checkstyle-result.xml</outputFile>
            		</configuration>
        	   </plugin>
 
-       	    <!--  Badge checkstyle -->
+       	    <!--  Badge checkstyle  -->
            <plugin>
             	<groupId>com.github.bordertech.buildtools</groupId>
             	<artifactId>badger</artifactId>
