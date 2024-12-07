@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 /**
  * Enumeration of pokemon comparator.
- * 
+ *
  * @author fv
  */
 public enum PokemonComparators implements Comparator<Pokemon> {
@@ -25,14 +25,16 @@ public enum PokemonComparators implements Comparator<Pokemon> {
 
 	/**
 	 * Default constructor.
-	 * 
+	 *
 	 * @param delegate Delegate comparator instance.
 	 */
 	private PokemonComparators(final Comparator<Pokemon> delegate) {
 		this.delegate = delegate;
 	}
 
-	/** {@inheritDoc} **/
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public int compare(final Pokemon first, final Pokemon second) {
 		

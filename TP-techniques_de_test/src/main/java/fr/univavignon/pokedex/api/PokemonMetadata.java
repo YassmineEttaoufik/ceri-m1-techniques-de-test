@@ -2,7 +2,7 @@ package fr.univavignon.pokedex.api;
 
 /**
  * Pokemon metadata POJO.
- * 
+ *
  * @author fv
  */
 public class PokemonMetadata {
@@ -24,14 +24,15 @@ public class PokemonMetadata {
 
 	/**
 	 * Default constructor.
-	 * 
+	 *
 	 * @param index Pokemon index.
 	 * @param name Pokemon name.
 	 * @param attack Attack level.
 	 * @param defense Defense level.
 	 * @param stamina Stamina level.
 	 */
-	public PokemonMetadata(final int index, final String name, final int attack, final int defense, final int stamina) {
+	public PokemonMetadata(final int index, final String name, final int attack, 
+			final int defense, final int stamina) {
 		this.index = index;
 		this.name = name;
 		this.attack = attack;

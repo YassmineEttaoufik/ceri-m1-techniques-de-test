@@ -14,11 +14,21 @@ public class Pokedex implements IPokedex{
 	List<Pokemon> pokemons;
 	IPokemonMetadataProvider pokemonProvider;
 	IPokemonFactory pookemonFactory;
-	
+
+	/**
+	 * Constructor of a Pokedex.
+	 *  This constructor initializes a new Pokedex with the given metadata provider
+	 *  and pokemon factory.
+	 *
+	 * @param pokemonProvider The provider that retrieves metadata for the pokemons.
+	 *  *                        This is used to fetch the details of a specific pokemon.
+	 * @param pokemonFactory  The factory used to create new Pokemon instances.
+	 *  *                        It allows creating Pokemon with specific attributes like index, cp, hp, etc.
+	 */
 	public Pokedex (IPokemonMetadataProvider pokemonProvider, IPokemonFactory pokemonFactory) {
-		this.pokemons= new ArrayList<>();
-		this.pokemonProvider=pokemonProvider;
-		this.pookemonFactory=pokemonFactory;
+		this.pokemons = new ArrayList<>();
+		this.pokemonProvider = pokemonProvider;
+		this.pookemonFactory = pokemonFactory;
 	}
 
 	/**
@@ -50,7 +60,7 @@ public class Pokedex implements IPokedex{
 
 	/**
 	 * Returns the size of the Pokedex.
-	 * 
+	 *
 	 * @return The size of the Pokedex
 	 */
 	@Override
@@ -85,7 +95,7 @@ public class Pokedex implements IPokedex{
 
 	@Override
 	public List<Pokemon> getPokemons(Comparator<Pokemon> order) {
-		List<Pokemon> sortedList= new ArrayList<>(pokemons);
+		List<Pokemon> sortedList = new ArrayList<>(pokemons);
 		sortedList.sort(order);
 		return sortedList;
 	}
