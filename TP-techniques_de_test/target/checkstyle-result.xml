@@ -9,28 +9,18 @@
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/Pokemon.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonTrainerFactory.java">
-<error line="25" column="17" severity="warning" message="Le fils de &apos;if&apos; au niveau d&apos;indentation 16 n&apos;est pas indenté correctement, le niveau attendu est 24." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokedexException.java">
-<error line="11" column="4" severity="warning" message="&apos;member def modifier&apos; au niveau d&apos;indentation 3 n&apos;est pas indenté correctement, le niveau attendu est 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="19" column="4" severity="warning" message="&apos;ctor def modifier&apos; au niveau d&apos;indentation 3 n&apos;est pas indenté correctement, le niveau attendu est 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="20" column="6" severity="warning" message="Le fils de &apos;ctor def&apos; au niveau d&apos;indentation 5 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="21" column="4" severity="warning" message="&apos;ctor def rcurly&apos; au niveau d&apos;indentation 3 n&apos;est pas indenté correctement, le niveau attendu est 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="23" column="2" severity="warning" message="&apos;class def rcurly&apos; au niveau d&apos;indentation 1 n&apos;est pas indenté correctement, le niveau attendu est 0." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/IPokedexFactory.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonFactory.java">
-<error line="35" severity="warning" message="La ligne excède 100 caractères (trouvé 102)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonTrainer.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokedexFactory.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonMetadataProvider.java">
-<error line="19" column="13" severity="warning" message="Le fils de &apos;static initialization&apos; au niveau d&apos;indentation 12 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="22" column="5" severity="warning" message="Commentaire de bloc au niveau d&apos;indentation 4 au lieu de 1, l&apos;indentation doit être au même niveau que la ligne 30." source="com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"/>
-<error line="33" column="17" severity="warning" message="L&apos;instruction &apos;if&apos; devrait utiliser des accolades (&apos;{&apos; et &apos;}&apos;)." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/IPokemonFactory.java">
 </file>
@@ -41,6 +31,5 @@
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonMetadata.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/Pokedex.java">
-<error line="87" column="17" severity="warning" message="L&apos;instruction &apos;if&apos; devrait utiliser des accolades (&apos;{&apos; et &apos;}&apos;)." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
 </file>
 </checkstyle>
