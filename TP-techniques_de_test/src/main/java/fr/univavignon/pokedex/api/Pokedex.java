@@ -23,7 +23,8 @@ public class Pokedex implements IPokedex{
 	 * @param pokemonProvider The provider that retrieves metadata for the pokemons.
 	 *  *                        This is used to fetch the details of a specific pokemon.
 	 * @param pokemonFactory  The factory used to create new Pokemon instances.
-	 *  *                        It allows creating Pokemon with specific attributes like index, cp, hp, etc.
+	 *  *                        It allows creating Pokemon with specific 
+	 *  							attributes like index, cp, hp, etc.
 	 */
 	public Pokedex (IPokemonMetadataProvider pokemonProvider, IPokemonFactory pokemonFactory) {
 		this.pokemons = new ArrayList<>();
@@ -83,7 +84,7 @@ public class Pokedex implements IPokedex{
 	 */
 	@Override
 	public Pokemon getPokemon(int id) throws PokedexException {
-		if(id<0 || id>pokemons.size()-1 || id>155)
+		if (id<0 || id>pokemons.size()-1 || id>155)
 			throw new PokedexException("index invalide");
 		return pokemons.get(id);
 	}
