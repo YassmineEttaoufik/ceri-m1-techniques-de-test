@@ -37,6 +37,12 @@ jobs:
       - run:
           name: Checkstyle Analysis
           command: cd TP-techniques_de_test && mvn checkstyle:checkstyle
+      - run:
+          name: Generate Badge for Checkstyle
+          command: cd TP-techniques_de_test && mvn badger:badges
+      - store_artifacts:
+          path: TP-techniques_de_test/target/checkstyle-result.xml
+          destination: checkstyle
       
       #Codecov
       - run:
