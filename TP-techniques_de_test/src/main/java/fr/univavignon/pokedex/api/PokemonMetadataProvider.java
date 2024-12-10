@@ -19,7 +19,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider{
 	    pokemonMetadata.add(0, new PokemonMetadata(0, "Bulbizarre", 126, 126, 90));
 	}
 
-     /**
+    /**
 	  * Retrieves and returns the metadata for the pokemon
 	  * denoted by the given <code>index</code>.
 	  *

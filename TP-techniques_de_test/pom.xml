@@ -71,14 +71,14 @@ http://maven.apache.org/maven-v4_0_0.xsd"
             	<version>3.2.0</version>
             	<executions>
                 <execution>
-                    <phase>verify</phase>
+                    
                     <goals>
                         <goal>check</goal>
                     </goals>
                 </execution>
             </executions>
             	<configuration>
-                	<configLocation>google_checks.xml</configLocation>
+                	<configLocation>checkstyle.xml</configLocation>
                		 <failOnViolation>true</failOnViolation>
                		  <outputFile>target/checkstyle-result.xml</outputFile>
            		</configuration>
