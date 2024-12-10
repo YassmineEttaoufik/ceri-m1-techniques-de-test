@@ -26,7 +26,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
             </execution>
         </executions>
         </plugin>
-        
+
         <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -41,8 +41,8 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                     </includes>
                 </configuration>
             </plugin>
-            
-            
+
+
       <!-- Plugin JaCoCo pour la couverture de code  -->
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -63,12 +63,12 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                     </execution>
                 </executions>
             </plugin>
-            
+
             <!--  Plugin checkstyle pour la qualité du code  -->
            <plugin>
             	<groupId>org.apache.maven.plugins</groupId>
             	<artifactId>maven-checkstyle-plugin</artifactId>
-            	<version>3.1.2</version>
+            	<version>3.2.0</version>
             	<executions>
                 <execution>
                     <phase>verify</phase>
@@ -83,7 +83,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                		  <outputFile>target/checkstyle-result.xml</outputFile>
            		</configuration>
        	   </plugin>
-       	   
+
        	    <!--  Badge checkstyle  -->
            <plugin>
             	<groupId>com.github.bordertech.buildtools</groupId>
@@ -94,7 +94,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                     <phase>verify</phase>
                     <goals>
                         <goal>badges</goal>
-                    </goals>         
+                    </goals>
             	<configuration>
                 	<outputDir>${project.basedir}</outputDir>
                 	 <inputFiles>
@@ -104,7 +104,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
            		</execution>
             </executions>
        	   </plugin>
-       	   
+
        	    <!--  Plugin javadoc   -->
            <plugin>
             	<groupId>org.apache.maven.plugins</groupId>
@@ -119,7 +119,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
                     </goals>
                 </execution>
             </executions>
-       	   </plugin> 
+       	   </plugin>
     </plugins>
 </build>
 
@@ -137,7 +137,7 @@ http://maven.apache.org/maven-v4_0_0.xsd"
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
-        
+
 	<dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>

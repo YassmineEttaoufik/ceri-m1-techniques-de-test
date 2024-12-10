@@ -2,7 +2,7 @@ package fr.univavignon.pokedex.api;
 
 /**
  * Trainer POJO.
- * 
+ *
  * @author fv
  */
 public class PokemonTrainer {
@@ -18,7 +18,7 @@ public class PokemonTrainer {
 	
 	/**
 	 * Default constructor.
-	 * 
+	 *
 	 * @param name Trainer name.
 	 * @param team Trainer team.
 	 * @param pokedex Trainer pokedex.
