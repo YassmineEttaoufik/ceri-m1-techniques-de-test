@@ -22,7 +22,7 @@ public class PokemonTrainerFactory implements IPokemonTrainerFactory {
 			IPokedex pokedex = pokedexFactory.createPokedex(
 				new PokemonMetadataProvider(), new PokemonFactory(
 				new PokemonMetadataProvider()));
-		return new PokemonTrainer(name, team, pokedex);
+		        return new PokemonTrainer(name, team, pokedex);
 		}
 		return null;
 	}
