@@ -9,7 +9,6 @@
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/Pokemon.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonTrainerFactory.java">
-<error line="22" column="17" severity="warning" message="Le fils de &apos;if&apos; au niveau d&apos;indentation 16 n&apos;est pas indenté correctement, le niveau attendu est 24." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 <error line="25" column="17" severity="warning" message="Le fils de &apos;if&apos; au niveau d&apos;indentation 16 n&apos;est pas indenté correctement, le niveau attendu est 24." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokedexException.java">
