@@ -32,7 +32,8 @@ public class PokemonFactory implements IPokemonFactory{
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
 		if (index >=0 && cp >0 && hp >0 && dust >0 && candy >0){
 			try {
-				PokemonMetadata metadata = metadataProvider.getPokemonMetadata(index);
+				PokemonMetadata metadata = metadataProvider.getPokemonMetadata(
+						index);
 				double iv = (12+10+11)/45.0*100;
 				return new Pokemon(index, metadata.getName(), metadata.getAttack(), 
 						metadata.getDefense(), metadata.getStamina(), 
