@@ -10,6 +10,27 @@
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokemonTrainerFactory.java">
 </file>
+<file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/RocketPokemonFactory.java">
+<error line="7" column="1" severity="warning" message="Séparation supplémentaire dans le groupe d&apos;importation avant &apos;org.apache.commons.collections4.map.UnmodifiableMap&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="9" column="1" severity="warning" message="Mauvais ordre lexicographique pour l&apos;import &apos;fr.univavignon.pokedex.api.IPokemonFactory&apos;. Il devrait être avant &apos;org.apache.commons.collections4.map.UnmodifiableMap&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="9" column="1" severity="warning" message="Séparation supplémentaire dans le groupe d&apos;importation avant &apos;fr.univavignon.pokedex.api.IPokemonFactory&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="10" column="1" severity="warning" message="Mauvais ordre lexicographique pour l&apos;import &apos;fr.univavignon.pokedex.api.Pokemon&apos;. Il devrait être avant &apos;org.apache.commons.collections4.map.UnmodifiableMap&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="12" column="1" severity="warning" message="Commentaire Javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="17" column="9" severity="warning" message="Le fils de &apos;static initialization&apos; au niveau d&apos;indentation 8 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="18" column="9" severity="warning" message="Le fils de &apos;static initialization&apos; au niveau d&apos;indentation 8 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="19" column="9" severity="warning" message="Le fils de &apos;static initialization&apos; au niveau d&apos;indentation 8 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="21" column="9" severity="warning" message="Le fils de &apos;static initialization&apos; au niveau d&apos;indentation 8 n&apos;est pas indenté correctement, le niveau attendu est 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="26" column="17" severity="warning" message="Il manque une espace après &apos;for&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="26" column="26" severity="warning" message="Il manque une espace après &apos;=&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="26" column="26" severity="warning" message="Il manque une espace avant &apos;=&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="17" severity="warning" message="&apos;for lcurly&apos; au niveau d&apos;indentation 16 n&apos;est pas indenté correctement, le niveau attendu est 18." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="27" column="17" severity="warning" message="&apos;{&apos; à la colonne 3 devrait être sur la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="29" column="21" severity="warning" message="Le fils de &apos;for&apos; au niveau d&apos;indentation 20 n&apos;est pas indenté correctement, le niveau attendu est l&apos;un des suivants : 24, 26." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="30" column="21" severity="warning" message="Le fils de &apos;for&apos; au niveau d&apos;indentation 20 n&apos;est pas indenté correctement, le niveau attendu est l&apos;un des suivants : 24, 26." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="31" column="17" severity="warning" message="&apos;for rcurly&apos; au niveau d&apos;indentation 16 n&apos;est pas indenté correctement, le niveau attendu est 18." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="38" column="17" severity="warning" message="Il manque une espace après &apos;if&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="47" column="17" severity="warning" message="Il manque une espace après &apos;if&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/PokedexException.java">
 </file>
 <file name="/Users/yassmineettaoufik/Desktop/ceri-m1-techniques-de-test/TP-techniques_de_test/src/main/java/fr/univavignon/pokedex/api/IPokedexFactory.java">
