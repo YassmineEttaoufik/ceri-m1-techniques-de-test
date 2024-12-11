@@ -68,10 +68,6 @@ public class IPokemonFactoryTest {
 		Pokemon bulbi=iPokemonFactory.createPokemon(-133, 2729, 202, 5000, 4);
 		assertNull(bulbi);
 		
-		//test de RocketPokemonFactory
-		Pokemon bulbiR=iPokemonFactory2.createPokemon(-133, 2729, 202, 5000, 4);
-		assertNull(bulbiR);
-		
 		//cp invalide
 		Pokemon bulbi1=iPokemonFactory.createPokemon(133, -2729, 202, 5000, 4);
 		assertNull(bulbi1);	
@@ -104,4 +100,40 @@ public class IPokemonFactoryTest {
 		Pokemon bulbiR4=iPokemonFactory2.createPokemon(133, 2729, 202, 5000, -4);
 		assertNull(bulbiR4);	
 		}
+	
+	//test avec index pas présent dans map
+		@Test
+	public void testCreatePokemonUnknownParameter() throws PokedexException{
+			int index=999;
+			Pokemon pok=iPokemonFactory2.createPokemon(index, 100, 100, 1000, 10);
+			
+			assertNotNull(pok);
+			assertEquals(index,pok.getIndex());
+			assertEquals("MISSINGNO",pok.getName());
+			assertEquals(100,pok.getCp());
+			assertEquals(100,pok.getHp());
+			assertEquals(1000,pok.getDust());
+			assertEquals(10,pok.getCandy());
+			
+		}
+		
+		//test avec index negatif
+		@Test
+	public void testCreatePokemonWithNegativeIndex() throws PokedexException{
+		int indexNegatif=-1;
+		Pokemon pok=iPokemonFactory2.createPokemon(indexNegatif, 100, 100, 1000, 10);
+					
+		assertNotNull(pok);
+		assertEquals(indexNegatif,pok.getIndex());
+		assertEquals("Ash's Pikachu",pok.getName());
+		assertEquals(100,pok.getCp());
+		assertEquals(100,pok.getHp());
+		assertEquals(1000,pok.getDust());
+		assertEquals(10,pok.getCandy());	
+		assertEquals(0,pok.getIv());	
+		assertEquals(1000,pok.getAttack());	
+		assertEquals(1000,pok.getDefense());	
+		assertEquals(1000,pok.getStamina());	
+					
+				}
 }

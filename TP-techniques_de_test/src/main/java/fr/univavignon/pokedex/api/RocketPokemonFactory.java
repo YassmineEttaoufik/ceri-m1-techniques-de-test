@@ -27,7 +27,7 @@ public class RocketPokemonFactory implements IPokemonFactory {
 
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-		if (index >=0 && cp >0 && hp >0 && dust >0 && candy >0){ 
+		if ( cp >0 && hp >0 && dust >0 && candy >0){ 
 		String name;
 		if(!index2name.containsKey(index)) {
 			name = index2name.get(0);
