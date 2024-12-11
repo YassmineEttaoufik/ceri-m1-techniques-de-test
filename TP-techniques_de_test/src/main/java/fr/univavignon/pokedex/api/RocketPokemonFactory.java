@@ -17,23 +17,17 @@ public class RocketPokemonFactory implements IPokemonFactory {
         aMap.put(-1, "Ash's Pikachu");
         aMap.put(0, "MISSINGNO");
         aMap.put(1, "Bulbasaur");
-        //TODO : Gotta map them all !
+        aMap.put(133, "Aquali");
         index2name = UnmodifiableMap.unmodifiableMap(aMap);
 	}
 	
 	private static int generateRandomStat() {
-		int total = 0;
-		for(int i=0; i < 1000000; i++)
-		{
-			Random rn = new Random();
-		    int r = rn.nextInt(2);
-		    total = total + r;
-		}
-		return total / 10000;
+		return new Random().nextInt(16);
 	}
 
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
+		if (index >=0 && cp >0 && hp >0 && dust >0 && candy >0){ 
 		String name;
 		if(!index2name.containsKey(index)) {
 			name = index2name.get(0);
@@ -55,7 +49,8 @@ public class RocketPokemonFactory implements IPokemonFactory {
 			stamina = RocketPokemonFactory.generateRandomStat();
 			iv = 1;
 		}
-		return new Pokemon(index, name, attack, defense, stamina, cp, hp, dust, candy, iv);
+		return new Pokemon(index, name, attack, defense, stamina, cp, hp, dust, candy, iv);}
+		return null;
 	}
 
 }

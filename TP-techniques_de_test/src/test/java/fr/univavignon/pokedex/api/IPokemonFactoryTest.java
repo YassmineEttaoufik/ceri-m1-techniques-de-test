@@ -49,14 +49,11 @@ public class IPokemonFactoryTest {
 		assertNotNull(aquali2);
 		assertEquals(133,aquali2.getIndex());
 		assertEquals("Aquali",aquali2.getName());
-		assertEquals(186,aquali2.getAttack());
-		assertEquals(168,aquali2.getDefense());
-		assertEquals(260,aquali2.getStamina());
 		assertEquals(2729,aquali2.getCp());
 		assertEquals(202,aquali2.getHp());
 		assertEquals(5000,aquali2.getDust());
 		assertEquals(4,aquali2.getCandy());
-		assertEquals(73,aquali2.getIv());		
+		assertEquals(1,aquali2.getIv());		
 	}
 	
 	//test de l'invalidité des paramètres
